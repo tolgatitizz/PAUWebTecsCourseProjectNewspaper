@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewData["Title"] = "Ekonomi";
+}
+
+
+
+@model List<Haber>
+
+
+<div class="row" style="margin-top: 2%;">
+
+    <h2> Hayat <span class="badge bg-primary" style="margin-top: 20px; margin-bottom:12px;"> Haberleri </span></h2>
+
+    <div class="col-md-8">
+        <div>
+            @if (!(Model == null))
+            {
+                @foreach (var item in Model)
+                {
+                    @if (item.KategoriId == 2)
+                    {
+                        <div class="card mb-3 " style="max-width: 95%;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="https://www.kindpng.com/picc/m/377-3775778_mustafa-kemal-atatrk-n-imzas-hd-png-download.png" class="imghw" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">@item.Baslik</h5>
+                                        <p class="card-text">@item.Metin</p>
+                                        <p class="card-text"><small class="text-muted">12.22.2020</small></p>
+                                        <a asp-controller="Home" asp-action="Details" asp-route-id="@item.Id" class="stretched-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            }
+            </div>
+
+    </div>
+
+    <div class="col-md-1"></div>
+
+    <div class="col-md-3">
+
+        <div>
+            @if (!(Model == null))
+            {
+                @foreach (var item in Model)
+                {
+
+                    <div class="card" style="width: 18rem;margin-top:2%">
+                        <img src="https://www.kindpng.com/picc/m/377-3775778_mustafa-kemal-atatrk-n-imzas-hd-png-download.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Baslik</h5>
+                            <p class="card-text">@item.Metin</p>
+                            <a asp-controller="Home" asp-action="Details" asp-route-id="@item.Id" class="stretched-link"></a>
+                        </div>
+                    </div>
+
+                }
+            }
+            </div>
+
+    </div>
+
+</div>

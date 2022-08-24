@@ -1,0 +1,79 @@
+﻿@model List<Haber>
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="row">
+    <div class="col-md-8" style="margin-top: 2%; ">
+        <h3>@ViewBag.Selected.Baslik <span class="badge bg-primary">Okuduğunuz Haber</span></h3>
+        <div id="CarouselCercevesi">
+            <div id="carouselExampleControls" class="carousel slide " style="height: 84%; width: 84%;" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="data:image/jpeg;base64,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" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMHBhUTEhITEBUVFxMSEhgVFRcQEhISFxIWGBcSFhUYHSgnGBonHhUWITEhJSkrLi4uFyAzODMtNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAJMBVwMBIgACEQEDEQH/xAAaAAEAAwEBAQAAAAAAAAAAAAAAAQMEBQIH/8QAOxAAAgIBAgMEBQoEBwAAAAAAAAECEQMEIQUSMUFRYXETIoGRsTI0NXKCobLB0fAUI0KSFVJic6LD8f/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwD6IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACG+VW9jIuJ4nOub7nXvA2A8SmoY7fSr9hk/xbF/mf8Aa/0A3ArwZlnx80d17irNr8eDJUpb++vMDSDzCayQTTtPoegAAAAEN0gJBXgzLPiUo7p3XZ0dfkeNTqo6VLmdX02b+AF4MUeKYpSrmf8AazVkyLFC26SA9gzYNdjzzqMrfu+JpAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADJxPHLNpuWHa1fl+6Iz6PHDStOKSS69vnZqclHq0vuMOu4d/EzclNrw/p2AoxTa4E77ml5F+KOGMFF8l0vO6K9Onr9A4P1XFpOvAufCsbw1W/f22BoytabStpJJJtV3mThmljLSc0kpOVt3v1KcOR5OETT3cbj96N3DvmMPqr4AZuGfyNVkx9ifNHyf/AKjovoc7BvxvJ9VfCB0gM2k1a1LapxcXTT6jDq1mzyik/V6vsvuMHFb0mpU4unJNNfmbuHYFg0q7W92+9sDUc3iUcs1LlpQq32Oq3OkVar5rP6svwsDPwf6Oj9r8bK9bU+IY1KqSlJ30/exZwf6Oj9r8bJ1OgWp1SlJ7JVXfu/1AnDDDkl6qg2u4o16/iNdDH2fKl4lfEdLHSwWSHquLV12o983NxiL74X9wE8U0yx6fnilFxae22xvxT9JiT70mZ+KOtBPy/NFmhVaOH1V8ALwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABi4rgeXTpx3cXzLx7/34FD4wnClGXN3eJ1CKA5MdLPHoG1am5c7S+B7fF1LHSjLn6VXadQigMWh0jx6Jxl1lbl4WZdNrf4DH6OcXab5a7UdgigMPC8Urlkkqc3aXcv38Dc3SJIA5OHGuJ6mUn8lerH9S3heVwk8Uusenijo9BQElWq+az+rL8LLSAMfB/o6P2vxsq1eWWj1vPvKDVPwZ0QByc+ofEqhCL5bTk2XcRxPFOGSKvk2a/wBJ0KokDj6jVf4ilCEXu1zN9iOtGPLGu4mqJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeVJNvw6+G1/mB6B5Uk2/DZ+DpP4NHoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAo1vzZ9u8fb6y2KVeOWy5FJxirp06bbr2JGyS5lvuRKKnGmrQGf0zjB20+Wai33xaW/s5v+Iwah5ZLavlSa8NuX4r3Mv9GvR8tKu6tvcSopSut+nuAzaXNLJJWnUr6pJLyp2zz6WUdPzXdukklsuZqzVHFGM7SSfa63J5Fy1Sru7AMyyyUKez5lFNpXTV20n7D1pb9JO3zest/sRLViioVyqu6tiYY1jWyS8tgMkpvHkyyTXqtOu/8Alw29vRF2bM8WVrra9T63Rr4P3ljwxc75VfW63v8AaRHo7z8zd18lV0vq2+0DzqrWkfa68rZ4zSlJxTikuZX619+1UaZR5lT3DXN18/aBmwYYx1MqXRxrw9Uo0/N6FQ3qdO+5P5Sv99ToJU/PqIrlVLZAZNK79F/tS/6jRqJcmJ11ptd+xEsEZxScU0tlt0Xh7keo41CqSVWl4Ju2gK8OKMaa3vtv5X6lHKpYnJv1k327pp7I1RwxhK1FJ96W4eGLnfKr763Ay8zx53Km9oppb/0308yzRRcJTt27Tfm4Js0pU/PqEqfn18QJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf/Z" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="data:image/jpeg;base64,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" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" style="height: 20%; background-color: rgba(0, 0, 0, 0.2); bottom: 0px;" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" style="height: 20%; background-color: rgba(0, 0, 0, 0.2); bottom: 0px;" href="#carouselExampleControls" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="yazarnotlari">
+            
+            <p>@ViewBag.Selected.Metin</p> 
+
+            <div>
+                <div class="row justify-content-start" style="width: 100%;">
+                    <div class="col-md-8 col-lg-6">
+                        <div class="contact-card-profile">
+                            <img src="https://placeimg.com/125/125/people" style="width: 20%;height: 20%;border-radius: 5%;padding: 2%;" />
+                            <div class="content" style="text-align: center;">
+                                <h5>@ViewBag.Selected.Yazar</h5>
+                                <p>Metin Yazarı</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-md-1"></div>
+
+
+    <div class="col-md-3" style="margin-top: 2%;">
+        <h4>Önerilen <span class="badge bg-primary" style="margin-top: 20px; margin-bottom:12px;">Haberler</span></h4>
+        <div>
+            @foreach (var item in Model)
+            {
+
+                <div class="card" style="width: 18rem;margin-top:2%">
+                    <img src="https://www.kindpng.com/picc/m/377-3775778_mustafa-kemal-atatrk-n-imzas-hd-png-download.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Baslik</h5>
+                        <p class="card-text">@item.Metin</p>
+                        <a asp-controller="Home" asp-action="Details" asp-route-id="@item.Id" class="stretched-link"></a>
+                    </div>
+                </div>
+
+            }
+        </div>
+       
+
+    </div>
+
+
+
+
+</div>

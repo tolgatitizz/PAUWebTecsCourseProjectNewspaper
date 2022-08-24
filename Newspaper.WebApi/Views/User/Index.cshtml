@@ -1,0 +1,9 @@
+﻿@model List<Haber>
+@{
+    ViewData["Title"] = "AddDelete";
+}
+
+
+<div class="container-lg AddDeleteCont">
+    @await Html.PartialAsync("PartialTableE",Model)
+</div>

@@ -1,0 +1,43 @@
+﻿@model Haber
+@{
+    ViewData["Title"] = "Put";
+}
+
+<div class="container-lg AddDeleteCont">
+
+    <div class="container" style="width: 50%;height: 50%;border: 2px gray solid;margin-top:36px;margin-bottom:72px">
+        <form asp-controller="User" asp-action="Put" method="POST">
+            <h2>Haber Düzenleme Tablosu</h2>
+
+
+            <label asp-for="Baslik" class="form-label"><h4>Haber Başlığı:</h4></label>
+            <input asp-for="Baslik" class="form-control mb-3" name="Baslik" id="inputbaslik" value="@Model.Baslik" placeholder="@Model.Baslik" required>
+
+
+
+            <label asp-for="Metin" class="form-label"><h4>Haber Metni:</h4></label>
+            <textarea asp-for="Metin" name="Metin" class="form-control mb-3" id="Metin" rows="3" value="@Model.Metin" required>@Model.Metin</textarea>
+
+
+            <label asp-for="Yazar" class="form-label"><h4>Yazar Adı</h4></label>
+            <input type="text" asp-for="Yazar" name="Yazar" class="form-control mb-3" id="Yazar" value="@Model.Yazar" placeholder="@Model.Yazar"required>
+
+
+            <label asp-for="KategoriId" class="form-label mb-3"><h4>Haber Kategorisi</h4></label>
+            <select class="form-select" asp-for="KategoriId" name="KategoriId" aria-label="Default select example" required>
+                <option value="@Model.KategoriId" selected>Kategoriler</option>
+                <option value="1">Dünya</option>
+                <option value="2">Sağlık</option>
+                <option value="3">Hayat</option>
+                <option value="4">Ekonomi</option>
+            </select>
+
+
+            <label for="exampleFormControlInput1" class="form-label"><h4>Resim Seçimi</h4></label>
+            <input type="file" class="form-control mb-3" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03" aria-label="Upload">
+
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Kaydet</button>
+        </form>
+    </div>
+</div>
+
